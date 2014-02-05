@@ -63,6 +63,9 @@ class Interpreter:
 			'[': self._bloop,
 			']': self._eloop,
 			}
+		self.reset()
+
+	def reset(self):
 		self._iptr = 0		# instruction pointer
 		self._data = [0]	# all data cells
 		self._dptr = 0		# data pointer
