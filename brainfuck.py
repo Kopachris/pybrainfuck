@@ -78,7 +78,9 @@ class Interpreter:
 			s = s.read()
 		except:		# not a file
 			try:
-				s = open(s).read()
+				f = open(s)
+				s = f.read()
+				f.close()
 			except:		# not a file path
 				pass
 		
