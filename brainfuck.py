@@ -86,7 +86,8 @@ class Interpreter:
 		while self._iptr < len(s):
 			c = s[self._iptr]
 			#print(c)
-			self._valid_inst[c]()
+			if c in self._valid_inst:
+				self._valid_inst[c]()
 			#print("dptr {} data {}".format(self._dptr, self._data[self._dptr]))
 			self._iptr += 1
 				
