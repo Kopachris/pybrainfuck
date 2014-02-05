@@ -30,6 +30,7 @@ can be constructed as such:
 [
 	> +++	#do something
 	<		# decrement pointer back to cell 0
+	-		# decrement counter
 ]
 
 Module usage:
@@ -69,7 +70,7 @@ class Interpreter:
 		self._iptr = 0		# instruction pointer
 		self._data = [0]	# all data cells
 		self._dptr = 0		# data pointer
-		self._max_data_value = 255	# one byte, as per Brainfuck specs
+		self._max_data_value = 255	# one byte, as per reference impl
 		self._min_data_value = 0
 		
 	def parse(self, s):
